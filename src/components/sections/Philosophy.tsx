@@ -6,8 +6,8 @@ export default function Philosophy() {
   const values = [
     {
       icon: Heart,
-      title: 'Mahakarya SDM',
-      description: 'Kami meyakini setiap tenaga kerja adalah mahakarya dan representasi langsung dari martabat bangsa di kancah global.',
+      title: 'Esensi Unggul',
+      description: 'Kami meyakini setiap tenaga kerja adalah talenta strategis dan representasi langsung dari martabat bangsa di kancah global.',
     },
     {
       icon: Users,
@@ -37,7 +37,7 @@ export default function Philosophy() {
           variants={fadeInUp}
         >
           <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 mb-6">
-            Filosofi <span className="italic text-orange-600 font-light">Mahakarya SDM</span>
+            Filosofi <span className="italic text-orange-600 font-light">Esensi Unggul</span>
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">
             Keyakinan mendalam bahwa setiap individu adalah representasi martabat bangsa menjadi fondasi utama seluruh pergerakan bisnis kami.

@@ -5,7 +5,7 @@ import {
   Sheet,
   SheetContent,
 } from '@/components/ui/sheet';
-import logoImg from '@/assets/logo.jpg';
+import logoImg from '@/assets/logo.png';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -57,7 +57,7 @@ export default function Navbar() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <div className="w-10 h-10 md:w-11 md:h-11 overflow-hidden rounded-full border border-orange-100 shadow-sm">
+          <div className="w-10 h-10 md:w-11 md:h-11 overflow-hidden rounded-full">
             <img src={logoImg} alt="Logo" className="w-full h-full object-cover" />
           </div>
           <div className="flex flex-col text-left">
@@ -107,7 +107,7 @@ export default function Navbar() {
                   {/* Header */}
                   <div className="flex items-center justify-between p-6 border-b border-orange-100/50">
                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-orange-100 shadow-md">
+                        <div className="w-9 h-9 rounded-full overflow-hidden">
                            <img src={logoImg} className="w-full h-full object-cover" alt="Logo" />
                         </div>
                         <div>
