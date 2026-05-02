@@ -48,9 +48,9 @@ export default function Hero() {
             variants={fadeInUp}
             className="mb-10 md:mb-14"
           >
-            <h1 className="font-heading text-6xl md:text-8xl lg:text-[10rem] font-normal text-gray-950 leading-[0.85] tracking-[-0.04em]">
-              Redefining <br className="hidden md:block" />
-              <span className="italic text-orange-600 font-light">Global Mobility.</span>
+            <h1 className="font-heading text-6xl md:text-8xl lg:text-[9.5rem] font-normal text-gray-950 leading-[0.85] tracking-[-0.04em]">
+              Elevating <br className="hidden md:block" />
+              <span className="italic text-orange-600 font-light">Human Potential.</span>
             </h1>
           </motion.div>
 
@@ -62,9 +62,8 @@ export default function Hero() {
             transition={{ delay: 0.15 }}
             className="text-gray-800 text-sm md:text-xl font-medium tracking-tight mb-14 md:mb-20 max-w-2xl mx-auto leading-relaxed px-6 drop-shadow-sm"
           >
-            Strategic international talent placement through 
-            <span className="text-gray-950 font-bold italic underline decoration-orange-200 underline-offset-4"> superior vocational ecosystems</span> and 
-            unwavering legal integrity.
+            Penyedia tenaga kerja profesional Indonesia yang menjembatani talenta unggul dengan 
+            <span className="text-gray-950 font-bold italic underline decoration-orange-200 underline-offset-4"> peluang karir global</span> melalui ekosistem vokasi premium.
           </motion.p>
 
           {/* CTA Cluster */}

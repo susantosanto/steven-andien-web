@@ -26,6 +26,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', updateScroll);
   }, []);
 
+  useEffect(() => {
+    if (isSheetOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [isSheetOpen]);
+
   const itemVariants = {
     closed: { opacity: 0, x: 20 },
     open: (i: number) => ({
@@ -93,8 +102,8 @@ export default function Navbar() {
           </button>
           
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-            <SheetContent className="w-[90%] max-w-[380px] bg-white rounded-2xl shadow-2xl border-0 p-0 overflow-hidden">
-               <div className="flex flex-col h-full bg-[#FCFAF8]">
+            <SheetContent className="bg-white rounded-[2.5rem] shadow-2xl border-0 overflow-hidden ring-1 ring-black/5">
+               <div className="flex flex-col h-[70vh] md:h-[60vh] bg-[#FCFAF8]">
                   {/* Header */}
                   <div className="flex items-center justify-between p-6 border-b border-orange-100/50">
                      <div className="flex items-center gap-3">
@@ -115,7 +124,7 @@ export default function Navbar() {
                   </div>
 
                   {/* Navigation Items */}
-                  <div className="flex-1 flex flex-col justify-center px-6 py-8">
+                  <div className="flex-1 flex flex-col justify-center px-6 py-6 overflow-y-auto min-h-0">
                     {navItems.map((item, i) => (
                       <motion.a
                         key={item.name}

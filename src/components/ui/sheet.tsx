@@ -1,4 +1,5 @@
 import * as React from "react"
+import { createPortal } from "react-dom"
 import { cn } from "@/lib/utils"
 
 interface SheetProps {
@@ -8,22 +9,32 @@ interface SheetProps {
 }
 
 const Sheet = ({ open, onOpenChange, children }: SheetProps) => {
-  if (!open) return null
+  const [mounted, setMounted] = React.useState(false)
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!open || !mounted) return null
+
+  return createPortal(
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center isolate">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/80 backdrop-blur-lg pointer-events-auto"
         onClick={() => onOpenChange?.(false)}
       />
-      {/* Sheet content - centered modal */}
+      {/* Centered Modal Container */}
       <div className={cn(
-        "relative w-full h-full flex items-center justify-center animate-in zoom-in-95 duration-200"
+        "relative z-10 w-full h-full flex items-center justify-center pointer-events-none px-4",
+        "animate-in zoom-in-95 fade-in duration-300 ease-out"
       )}>
-        {children}
+        <div className="w-full max-w-[400px] pointer-events-auto">
+          {children}
+        </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
 

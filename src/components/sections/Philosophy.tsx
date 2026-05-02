@@ -6,23 +6,23 @@ export default function Philosophy() {
   const values = [
     {
       icon: Heart,
-      title: 'Kekuatan Individual',
-      description: 'Setiap tenaga kerja adalah mahakarya dan representasi langsung dari martabat bangsa.',
+      title: 'Mahakarya SDM',
+      description: 'Kami meyakini setiap tenaga kerja adalah mahakarya dan representasi langsung dari martabat bangsa di kancah global.',
     },
     {
       icon: Users,
-      title: 'Partner Seumur Hidup',
-      description: 'Kami menempatkan diri sebagai partner strategis dalam pengembangan karir berkelanjutan.',
+      title: 'Partner Strategis',
+      description: 'Bukan sekadar agen penempatan, kami adalah partner strategis seumur hidup dalam pengembangan karir berkelanjutan.',
     },
     {
       icon: TrendingUp,
-      title: 'Peningkatan Berkelanjutan',
-      description: 'Kesuksesan diukur dari peningkatan kesejahteraan ekonomi dan kualitas hidup keluarga.',
+      title: 'Kesejahteraan Nyata',
+      description: 'Kesuksesan diukur dari seberapa nyata kami mampu meningkatkan kesejahteraan ekonomi dan kualitas hidup keluarga pekerja.',
     },
     {
       icon: Handshake,
-      title: 'Hubungan Harmonis',
-      description: 'Membangun hubungan kerja yang saling menguntungkan dengan empati dan profesionalisme.',
+      title: 'Perlindungan Paripurna',
+      description: 'Menjamin perlindungan hak asasi dan keamanan setiap individu yang kami berangkatkan dengan integritas hukum tertinggi.',
     },
   ];
 
@@ -33,17 +33,14 @@ export default function Philosophy() {
           className="text-center max-w-3xl mx-auto mb-20"
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="inline-block px-4 py-1.5 mb-6 text-orange-600 font-bold tracking-widest uppercase text-xs bg-orange-100/50 rounded-full border border-orange-200/50">
-            Our Core Values
-          </div>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-8 leading-tight">
-            Filosofi <span className="text-orange-600 underline decoration-orange-200 underline-offset-8">Pelayanan</span>
+          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 mb-6">
+            Filosofi <span className="italic text-orange-600 font-light">Mahakarya SDM</span>
           </h2>
-          <p className="text-xl text-gray-500 font-medium max-w-2xl mx-auto">
-            Landasan etika yang membimbing setiap langkah kami dalam memberdayakan potensi manusia secara global.
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Keyakinan mendalam bahwa setiap individu adalah representasi martabat bangsa menjadi fondasi utama seluruh pergerakan bisnis kami.
           </p>
         </motion.div>
 

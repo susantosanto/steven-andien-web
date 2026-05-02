@@ -165,24 +165,34 @@ export default function Contact() {
                 </div>
               </Card>
 
-              {/* Map Placeholder */}
-              <Card className="p-6 bg-white border-orange-200">
-                <h3 className="font-heading text-xl font-bold text-gray-900 mb-4">
-                  Lokasi Kami
-                </h3>
-                <div className="aspect-video bg-orange-100 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-orange-500 mx-auto mb-2" />
-                    <p className="text-gray-600">Kabupaten Bandung Barat, Jawa Barat</p>
-                    <a
-                      href="https://maps.google.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-orange-500 hover:underline text-sm"
-                    >
-                      Buka di Google Maps
-                    </a>
-                  </div>
+              {/* Google Maps Integration */}
+              <Card className="p-0 bg-white border-orange-200 overflow-hidden shadow-xl shadow-orange-100/50">
+                <div className="p-6 pb-2">
+                  <h3 className="font-heading text-xl font-bold text-gray-900 mb-1">
+                    Lokasi Kami
+                  </h3>
+                  <p className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Headquarters & Training Center</p>
+                </div>
+                <div className="w-full h-[300px] grayscale-[0.2] contrast-[1.1] hover:grayscale-0 transition-all duration-700">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15846.88371131758!2d107.447545!3d-6.755106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690382223f66f7%3A0xc340b0d39e3f94!2sMandalamukti%2C%20Cikalong%20Wetan%2C%20West%20Bandung%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1714656000000!5m2!1sen!2sid"
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={true} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div className="p-4 bg-orange-50/50 flex items-center justify-between">
+                   <span className="text-xs text-gray-500 font-medium">Kab. Bandung Barat, Jawa Barat</span>
+                   <a 
+                     href="https://maps.app.goo.gl/vjX6A9A8p9z6S6N87" 
+                     target="_blank" 
+                     className="text-xs font-bold text-orange-600 hover:text-orange-700 underline underline-offset-4"
+                   >
+                     Petunjuk Arah
+                   </a>
                 </div>
               </Card>
             </div>
